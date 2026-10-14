@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "caption": "Sizzling fajitas",
+      "image": "/img/sizzling-fajitas-600.webp",
+      "imageLarge": "/img/sizzling-fajitas-1100.webp",
+      "alt": "Sizzling steak fajitas with peppers and onions at Si Señor Mexican Grill"
+    },
+    {
+      "caption": "Chips & fresh salsa",
+      "image": "/img/chips-and-salsa-600.webp",
+      "imageLarge": "/img/chips-and-salsa-1000.webp",
+      "alt": "Warm tortilla chips with fresh salsa"
+    },
+    {
+      "caption": "Chimichanga plate",
+      "image": "/img/chimichanga-plate-600.webp",
+      "imageLarge": "/img/chimichanga-plate-1000.webp",
+      "alt": "A golden chimichanga plate with rice and refried beans"
+    }
+  ]
+}

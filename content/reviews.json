@@ -1,0 +1,51 @@
+{
+  "raveAbout": [
+    {
+      "text": "Fresh salsa"
+    },
+    {
+      "text": "Homemade corn tortillas"
+    },
+    {
+      "text": "Quick service"
+    },
+    {
+      "text": "Friendly staff"
+    },
+    {
+      "text": "Fair prices"
+    }
+  ],
+  "quotes": [
+    {
+      "stars": 5,
+      "quote": "The food and service were great! … Everything was seasoned well and was fresh. The salsa has just the perfect amount of spices and not overkill. The server was very attentive and friendly.",
+      "author": "Angie D.",
+      "source": "Google review"
+    },
+    {
+      "stars": 5,
+      "quote": "Friendly staff. Chips are warm and crisp, tasty sauce with a little twist… Food served hot, from the stove to the table. Definitely recommended to all.",
+      "author": "Yi S.",
+      "source": "Google review"
+    }
+  ],
+  "mostMentioned": [
+    {
+      "dish": "White queso",
+      "count": 3
+    },
+    {
+      "dish": "Sopapillas",
+      "count": 3
+    },
+    {
+      "dish": "Chile relleno",
+      "count": 2
+    },
+    {
+      "dish": "Chicken enchiladas",
+      "count": 2
+    }
+  ]
+}

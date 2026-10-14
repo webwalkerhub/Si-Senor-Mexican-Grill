@@ -1,0 +1,203 @@
+# Editing dashboard for Pages CMS (https://app.pagescms.org).
+# Each entry is one screen. Saving commits to GitHub and Netlify rebuilds the site (~1 minute).
+# Every field in each content file is listed so saving never drops data.
+
+media:
+  input: src/img
+  output: /img
+  categories: [image]
+  rename: safe
+
+content:
+  - name: specials
+    label: Today's specials & Taco Tuesday
+    type: file
+    path: content/specials.json
+    format: json
+    fields:
+      - { name: intro, label: Line under "Today's especiales", type: text }
+      - name: lunch
+        label: Lunch special (the chalkboard)
+        type: object
+        fields:
+          - { name: label, label: "Small label (e.g. Lunch special)", type: string }
+          - { name: title, label: Special name, type: string }
+          - { name: price, label: "Price (e.g. $8.99)", type: string }
+          - name: options
+            label: "Choices (e.g. Steak, Chicken)"
+            type: object
+            list: true
+            fields:
+              - { name: text, label: Choice, type: string }
+          - { name: description, label: Description, type: text }
+      - name: tacoTuesday
+        label: Weekly special (Taco Tuesday card)
+        type: object
+        fields:
+          - { name: show, label: Show this card, type: boolean }
+          - { name: label, label: "Small label (e.g. Weekly)", type: string }
+          - { name: title, label: Name, type: string }
+          - { name: day, label: Day it happens, type: select, options: { values: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday] } }
+          - { name: startsAt, label: "Starts at (24-hour clock, e.g. 17:00 = 5 PM)", type: string }
+          - { name: badge, label: "Photo badge on other days (e.g. Every Tuesday)", type: string }
+          - { name: image, label: Photo, type: image }
+          - { name: imageLarge, label: "Large photo for big screens (optional)", type: image }
+          - { name: alt, label: "Photo description (for Google & screen readers)", type: string }
+          - name: items
+            label: Deals
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Item, type: string }
+              - { name: note, label: Small note, type: string }
+              - { name: price, label: "Price (e.g. $1)", type: string }
+
+  - name: business
+    label: Business info & hours
+    type: file
+    path: content/business.json
+    format: json
+    fields:
+      - { name: name, label: Business name, type: string, required: true }
+      - { name: logoLine1, label: "Logo, big line (e.g. Si Señor)", type: string }
+      - { name: logoLine2, label: "Logo, ribbon line (e.g. Mexican Grill)", type: string }
+      - { name: kicker, label: Script line above the name, type: string }
+      - { name: tagline, label: Line under the name, type: text }
+      - name: highlights
+        label: Highlight tags under the name (Google rating is added automatically)
+        type: object
+        list: true
+        fields:
+          - { name: text, label: Tag, type: string }
+      - { name: phone, label: "Phone, as shown (e.g. (918) 655-3131)", type: string, required: true }
+      - { name: street, label: Street address, type: string, required: true }
+      - { name: city, label: City, type: string, required: true }
+      - { name: state, label: State, type: string, required: true }
+      - { name: zip, label: ZIP code, type: string, required: true }
+      - { name: mapsUrl, label: Google Maps link (reviews & map), type: string }
+      - { name: directionsUrl, label: Google Maps directions link, type: string }
+      - { name: latitude, label: "Map latitude (leave as is)", type: number }
+      - { name: longitude, label: "Map longitude (leave as is)", type: number }
+      - { name: nearby, label: Line under the address, type: text }
+      - name: services
+        label: Service tags (Dine-in, Drive-thru…)
+        type: object
+        list: true
+        fields:
+          - { name: text, label: Tag, type: string }
+      - { name: googleRating, label: "Google rating (e.g. 4.6)", type: string }
+      - { name: googleReviewCount, label: Number of Google reviews, type: string }
+      - { name: callbarText, label: Red call bar text (menu section), type: string }
+      - name: ticker
+        label: Scrolling banner messages
+        type: object
+        list: true
+        fields:
+          - { name: text, label: Message, type: string }
+      - name: hours
+        label: "Hours (24-hour clock: 11:00 = 11 AM, 21:00 = 9 PM)"
+        type: object
+        list: true
+        fields:
+          - { name: day, label: Day, type: string, readonly: true }
+          - { name: note, label: "Tag next to the day (e.g. Taco Tuesday)", type: string }
+          - { name: closed, label: Closed all day, type: boolean }
+          - { name: opens, label: "Opens (e.g. 11:00)", type: string }
+          - { name: closes, label: "Closes (e.g. 21:00)", type: string }
+      - { name: footerNote, label: "Footer note (leave empty once the site is live)", type: string }
+
+  - name: menu
+    label: Full menu
+    type: file
+    path: content/menu.json
+    format: json
+    fields:
+      - name: categories
+        label: Menu sections
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Section name, type: string, required: true }
+          - { name: note, label: Section note (optional), type: string }
+          - name: items
+            label: Dishes
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Dish name, type: string, required: true }
+              - { name: price, label: "Price (e.g. $9.99 or $6.00 / $7.25)", type: string }
+              - { name: description, label: Description, type: text }
+      - { name: footnote, label: Note at the bottom of the menu, type: text }
+
+  - name: home-menu
+    label: Menu preview cards (homepage)
+    type: file
+    path: content/home-menu.json
+    format: json
+    fields:
+      - name: sections
+        label: Cards (each shows the first dishes of a menu section)
+        type: object
+        list: true
+        fields:
+          - { name: category, label: "Menu section name (must match the Full menu exactly)", type: string }
+      - { name: itemsShown, label: Dishes shown per card, type: number }
+
+  - name: photos
+    label: Food photos (menu section)
+    type: file
+    path: content/photos.json
+    format: json
+    fields:
+      - name: items
+        label: Photos (the first one shows large)
+        type: object
+        list: true
+        fields:
+          - { name: caption, label: Caption, type: string }
+          - { name: image, label: Photo, type: image }
+          - { name: imageLarge, label: "Large photo for big screens (optional)", type: image }
+          - { name: alt, label: "Photo description (for Google & screen readers)", type: string }
+
+  - name: reviews
+    label: Reviews
+    type: file
+    path: content/reviews.json
+    format: json
+    fields:
+      - name: raveAbout
+        label: "\"Diners rave about\" tags"
+        type: object
+        list: true
+        fields:
+          - { name: text, label: Tag, type: string }
+      - name: quotes
+        label: Review quotes
+        type: object
+        list: true
+        fields:
+          - { name: stars, label: Stars (1-5), type: number }
+          - { name: quote, label: Review text, type: text }
+          - { name: author, label: Reviewer name, type: string }
+          - { name: source, label: "Source (e.g. Google review)", type: string }
+      - name: mostMentioned
+        label: "\"Most mentioned\" dishes"
+        type: object
+        list: true
+        fields:
+          - { name: dish, label: Dish, type: string }
+          - { name: count, label: Times mentioned, type: number }
+
+  - name: seo
+    label: Google & sharing (SEO)
+    type: file
+    path: content/seo.json
+    format: json
+    fields:
+      - { name: siteUrl, label: "Website address (change at launch)", type: string, required: true }
+      - { name: title, label: Google title, type: string }
+      - { name: description, label: Google description, type: text }
+      - { name: shareDescription, label: Text shown when the link is shared, type: text }
+      - { name: cuisine, label: "Cuisine (comma separated)", type: string }
+      - { name: priceRange, label: "Price range (e.g. $10–20)", type: string }
+      - { name: hideFromGoogle, label: Hide this site from Google (keep on for previews), type: boolean }

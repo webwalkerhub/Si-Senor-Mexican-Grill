@@ -1,0 +1,114 @@
+{
+  "name": "Si Señor Mexican Grill",
+  "logoLine1": "Si Señor",
+  "logoLine2": "Mexican Grill",
+  "kicker": "¡Bienvenidos, amigos!",
+  "tagline": "Fresh salsa, homemade corn tortillas and sizzling fajitas on US-271 in Wister, Oklahoma.",
+  "highlights": [
+    {
+      "text": "Lunch special daily"
+    },
+    {
+      "text": "Dine-in"
+    },
+    {
+      "text": "Drive-thru"
+    }
+  ],
+  "phone": "(918) 655-3131",
+  "street": "501 US-271",
+  "city": "Wister",
+  "state": "OK",
+  "zip": "74966",
+  "mapsUrl": "https://www.google.com/maps/place/Si+Se%C3%B1or+Mexican+Grill/@34.9728471,-94.724048,17z/data=!3m1!4b1!4m6!3m5!1s0x87caf3673414c1d5:0x532b24c14ef0f71c!8m2!3d34.9728471!4d-94.7214731!16s%2Fg%2F11fhv9szgg",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=Si+Se%C3%B1or+Mexican+Grill,+501+US-271,+Wister,+OK+74966",
+  "latitude": 34.9728471,
+  "longitude": -94.7214731,
+  "nearby": "On US-271 in Wister, close to Lake Wister State Park and a short drive from Poteau. Dine in or grab it from the drive-thru.",
+  "services": [
+    {
+      "text": "Dine-in"
+    },
+    {
+      "text": "Drive-thru"
+    },
+    {
+      "text": "$10–20 per person"
+    }
+  ],
+  "googleRating": "4.6",
+  "googleReviewCount": "584",
+  "callbarText": "Hungry? Call ahead or swing through the drive-thru.",
+  "ticker": [
+    {
+      "text": "LUNCH SPECIAL EVERY DAY"
+    },
+    {
+      "text": "TACO TUESDAY FROM 5 PM"
+    },
+    {
+      "text": "HOMEMADE CORN TORTILLAS"
+    },
+    {
+      "text": "FRESH SALSA"
+    },
+    {
+      "text": "DRIVE-THRU"
+    },
+    {
+      "text": "WISTER, OKLAHOMA"
+    }
+  ],
+  "hours": [
+    {
+      "day": "Sunday",
+      "note": "",
+      "closed": false,
+      "opens": "11:00",
+      "closes": "21:00"
+    },
+    {
+      "day": "Monday",
+      "note": "",
+      "closed": false,
+      "opens": "11:00",
+      "closes": "21:00"
+    },
+    {
+      "day": "Tuesday",
+      "note": "Taco Tuesday",
+      "closed": false,
+      "opens": "11:00",
+      "closes": "21:00"
+    },
+    {
+      "day": "Wednesday",
+      "note": "",
+      "closed": false,
+      "opens": "11:00",
+      "closes": "21:00"
+    },
+    {
+      "day": "Thursday",
+      "note": "",
+      "closed": false,
+      "opens": "11:00",
+      "closes": "21:00"
+    },
+    {
+      "day": "Friday",
+      "note": "",
+      "closed": false,
+      "opens": "11:00",
+      "closes": "21:00"
+    },
+    {
+      "day": "Saturday",
+      "note": "",
+      "closed": false,
+      "opens": "11:00",
+      "closes": "21:00"
+    }
+  ],
+  "footerNote": "Private design preview, not yet published."
+}

@@ -1,0 +1,43 @@
+{
+  "intro": "There’s a new lunch special every day, plus Taco Tuesday every week. Here’s what’s cooking.",
+  "lunch": {
+    "label": "Lunch special",
+    "title": "Street Taco Lunch",
+    "price": "$8.99",
+    "options": [
+      {
+        "text": "Steak"
+      },
+      {
+        "text": "Chicken"
+      },
+      {
+        "text": "Pastor"
+      }
+    ],
+    "description": "Two street tacos with your choice of steak, chicken or pastor, rice or beans, and a drink."
+  },
+  "tacoTuesday": {
+    "show": true,
+    "label": "Weekly",
+    "title": "Taco Tuesday",
+    "day": "Tuesday",
+    "startsAt": "17:00",
+    "badge": "Every Tuesday",
+    "image": "/img/taco-tuesday-tacos-600.webp",
+    "imageLarge": "/img/taco-tuesday-tacos-1000.webp",
+    "alt": "A tray of crispy and soft tacos for Taco Tuesday at Si Señor",
+    "items": [
+      {
+        "name": "Crispy taco",
+        "note": "Ground beef or shredded chicken",
+        "price": "$1"
+      },
+      {
+        "name": "Soft taco",
+        "note": "Ground beef or shredded chicken",
+        "price": "$1.75"
+      }
+    ]
+  }
+}

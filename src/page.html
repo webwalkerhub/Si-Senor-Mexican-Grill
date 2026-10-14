@@ -216,7 +216,7 @@ footer a{color:#fff;text-decoration:none}
 <h1 class="lockup"><span class="lk">{{logoLine1}}</span><span class="rib">{{logoLine2}}</span><span class="sub">{{tagline}}</span></h1>
 <ul class="chips" aria-label="Highlights"><!--@highlights--></ul>
 <div class="open" id="openNow"><span class="dot"></span><span id="openText">Open today</span></div>
-<div class="cta"><a class="btn r" href="#specials">Today&rsquo;s specials</a><a class="btn w" href="{{directionsUrl}}" target="_blank" rel="noopener">Directions</a><a class="btn y" href="tel:{{tel}}">Call {{phone}}</a></div>
+<div class="cta"><a class="btn r" href="#specials">{{heroButton}}</a><a class="btn w" href="{{directionsUrl}}" target="_blank" rel="noopener">Directions</a><a class="btn y" href="tel:{{tel}}">Call {{phone}}</a></div>
 </div>
 <div class="art"><div class="sun" aria-hidden="true"></div><img src="img/si-senor-mascot-420.webp" srcset="img/si-senor-mascot-420.webp 420w, img/si-senor-mascot-900.webp 900w" sizes="(max-width:900px) 70vw, 460px" width="420" height="472" alt="{{name}} mascot in a sombrero holding a burrito" decoding="async" fetchpriority="high" class="mascot"><a class="stars" href="{{mapsUrl}}" target="_blank" rel="noopener" aria-label="Rated {{googleRating}} out of 5 from {{googleReviewCount}} Google reviews"><b>{{googleRating}}</b><span>&#9733;&#9733;&#9733;&#9733;&#9733;</span><small>{{googleReviewCount}} Google reviews</small></a></div>
 </div>
@@ -224,7 +224,7 @@ footer a{color:#fff;text-decoration:none}
 <section id="specials">
 <div class="bunt" aria-hidden="true"></div>
 <div class="wrap">
-<h2 class="rv">Today&rsquo;s <em>especiales</em></h2>
+<h2 class="rv">{{specialsHeading}} <em>{{specialsAccent}}</em></h2>
 <p class="lede rv">{{specialsIntro}}</p>
 <div class="sp">
 <!--@specials-->
@@ -233,7 +233,7 @@ footer a{color:#fff;text-decoration:none}
 </section>
 <section id="menu">
 <div class="wrap">
-<div class="sec-h"><div><h2 class="rv">The <em>menu</em></h2><p class="lede rv">Everything&rsquo;s served hot, from the stove to the table. Here&rsquo;s a taste, and the whole menu is one tap away.</p></div><button type="button" class="btn r rv" data-open="{{firstCategory}}">See full menu</button></div>
+<div class="sec-h"><div><h2 class="rv">{{menuHeading}} <em>{{menuAccent}}</em></h2><p class="lede rv">{{menuIntro}}</p></div><button type="button" class="btn r rv" data-open="{{firstCategory}}">See full menu</button></div>
 <div class="mph">
 <!--@photos-->
 </div>
@@ -243,7 +243,7 @@ footer a{color:#fff;text-decoration:none}
 </section>
 <section id="reviews">
 <div class="wrap">
-<div class="rhead"><h2 class="rv">What folks are <em>saying</em></h2><div class="stat rv"><div><b>{{googleRating}}&#9733;</b><small>Google rating</small></div><div><b>{{googleReviewCount}}</b><small>Reviews</small></div></div></div>
+<div class="rhead"><h2 class="rv">{{reviewsHeading}} <em>{{reviewsAccent}}</em></h2><div class="stat rv"><div><b>{{googleRating}}&#9733;</b><small>Google rating</small></div><div><b>{{googleReviewCount}}</b><small>Reviews</small></div></div></div>
 <!--@rave-->
 <div class="quotes">
 <!--@quotes-->
@@ -256,7 +256,7 @@ footer a{color:#fff;text-decoration:none}
 <div class="bunt" aria-hidden="true"></div>
 <div class="wrap visit">
 <div class="rv">
-<h2>Come <em>see us</em></h2>
+<h2>{{visitHeading}} <em>{{visitAccent}}</em></h2>
 <p class="addr">{{street}}<br>{{city}}, {{state}} {{zip}}<br><a href="tel:{{tel}}">{{phone}}</a></p>
 <p class="near">{{nearby}}</p>
 <div class="vbtns"><a class="btn y" href="{{directionsUrl}}" target="_blank" rel="noopener">Get directions</a><a class="btn w" href="tel:{{tel}}">Call {{phone}}</a></div>

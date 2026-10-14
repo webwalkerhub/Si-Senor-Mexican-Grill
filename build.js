@@ -15,6 +15,8 @@ const menuFile = read('menu.json');
 const menu = menuFile.categories || [];
 const homeMenu = read('home-menu.json');
 const reviews = read('reviews.json');
+const home = read('homepage.json');
+const hero = home.hero || {};
 
 // ---------- helpers ----------
 function fail(msg) { console.error('\nBUILD STOPPED: ' + msg + '\n'); process.exit(1); }
@@ -86,8 +88,8 @@ if (!cats.length) fail('The full menu needs at least one section.');
 
 // ---------- blocks ----------
 const B = {};
-B.ticker = (() => { const s = list(biz.ticker).map((t) => `<span>${esc(t)} <i>&#10022;</i></span>`).join(''); return s + '\n' + s; })();
-B.highlights = list(biz.highlights).map((t, i) => `<li${i === 0 ? ' class="on"' : ''}>${esc(t)}</li>`).join('') +
+B.ticker = (() => { const s = list(home.ticker).map((t) => `<span>${esc(t)} <i>&#10022;</i></span>`).join(''); return s + '\n' + s; })();
+B.highlights = list(hero.highlights).map((t, i) => `<li${i === 0 ? ' class="on"' : ''}>${esc(t)}</li>`).join('') +
   (biz.googleRating ? `<li>${esc(biz.googleRating)}&#9733; on Google</li>` : '');
 
 const L = specials.lunch || {};
@@ -181,11 +183,15 @@ B.head = [
 
 // ---------- render ----------
 const tokens = {
-  name: biz.name, logoLine1: biz.logoLine1, logoLine2: biz.logoLine2, kicker: biz.kicker, tagline: biz.tagline,
+  name: biz.name, logoLine1: home.nameLine1, logoLine2: home.nameLine2, kicker: hero.kicker, tagline: hero.tagline, heroButton: hero.buttonText,
   phone: biz.phone, tel: '+1' + digits.slice(-10), street: biz.street, city: biz.city, state: biz.state, zip: biz.zip,
-  mapsUrl: biz.mapsUrl, directionsUrl: biz.directionsUrl, nearby: biz.nearby, callbarText: biz.callbarText,
+  mapsUrl: biz.mapsUrl, directionsUrl: biz.directionsUrl, nearby: (home.visit || {}).nearby, callbarText: (home.menu || {}).callbarText,
   googleRating: biz.googleRating, googleReviewCount: biz.googleReviewCount,
-  specialsIntro: specials.intro, menuFootnote: menuFile.footnote, firstCategory: cats[0].id,
+  specialsIntro: (home.specials || {}).intro,
+  specialsHeading: (home.specials || {}).heading, specialsAccent: (home.specials || {}).accent,
+  menuHeading: (home.menu || {}).heading, menuAccent: (home.menu || {}).accent, menuIntro: (home.menu || {}).intro,
+  reviewsHeading: (home.reviews || {}).heading, reviewsAccent: (home.reviews || {}).accent,
+  visitHeading: (home.visit || {}).heading, visitAccent: (home.visit || {}).accent, menuFootnote: menuFile.footnote, firstCategory: cats[0].id,
 };
 let page = fs.readFileSync(path.join(ROOT, 'src', 'page.html'), 'utf8');
 page = page.replace(/<!--@(\w+)-->/g, (m, k) => { if (!(k in B)) fail(`Template block "${k}" has no content.`); return B[k]; });

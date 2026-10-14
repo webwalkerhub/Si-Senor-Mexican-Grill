@@ -9,13 +9,68 @@ media:
   rename: safe
 
 content:
+  - name: homepage
+    label: Homepage (headings & text)
+    type: file
+    path: content/homepage.json
+    format: json
+    fields:
+      - { name: nameLine1, label: "Name, big line (e.g. Si Señor)", type: string }
+      - { name: nameLine2, label: "Name, ribbon line (e.g. Mexican Grill)", type: string }
+      - name: hero
+        label: Top of the page
+        type: object
+        fields:
+          - { name: kicker, label: Script line above the name, type: string }
+          - { name: tagline, label: Line under the name, type: text }
+          - name: highlights
+            label: Highlight tags (Google rating is added automatically)
+            type: object
+            list: true
+            fields:
+              - { name: text, label: Tag, type: string }
+          - { name: buttonText, label: Red button text, type: string }
+      - name: ticker
+        label: Scrolling banner messages
+        type: object
+        list: true
+        fields:
+          - { name: text, label: Message, type: string }
+      - name: specials
+        label: Specials section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: accent, label: "Heading, colored word(s)", type: string }
+          - { name: intro, label: Line under the heading, type: text }
+      - name: menu
+        label: Menu section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: accent, label: "Heading, colored word(s)", type: string }
+          - { name: intro, label: Line under the heading, type: text }
+          - { name: callbarText, label: Red call bar text, type: string }
+      - name: reviews
+        label: Reviews section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: accent, label: "Heading, colored word(s)", type: string }
+      - name: visit
+        label: Visit section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: accent, label: "Heading, colored word(s)", type: string }
+          - { name: nearby, label: Line under the address, type: text }
+
   - name: specials
     label: Today's specials & Taco Tuesday
     type: file
     path: content/specials.json
     format: json
     fields:
-      - { name: intro, label: Line under "Today's especiales", type: text }
       - name: lunch
         label: Lunch special (the chalkboard)
         type: object
@@ -59,16 +114,6 @@ content:
     format: json
     fields:
       - { name: name, label: Business name, type: string, required: true }
-      - { name: logoLine1, label: "Logo, big line (e.g. Si Señor)", type: string }
-      - { name: logoLine2, label: "Logo, ribbon line (e.g. Mexican Grill)", type: string }
-      - { name: kicker, label: Script line above the name, type: string }
-      - { name: tagline, label: Line under the name, type: text }
-      - name: highlights
-        label: Highlight tags under the name (Google rating is added automatically)
-        type: object
-        list: true
-        fields:
-          - { name: text, label: Tag, type: string }
       - { name: phone, label: "Phone, as shown (e.g. (918) 655-3131)", type: string, required: true }
       - { name: street, label: Street address, type: string, required: true }
       - { name: city, label: City, type: string, required: true }
@@ -78,7 +123,6 @@ content:
       - { name: directionsUrl, label: Google Maps directions link, type: string }
       - { name: latitude, label: "Map latitude (leave as is)", type: number }
       - { name: longitude, label: "Map longitude (leave as is)", type: number }
-      - { name: nearby, label: Line under the address, type: text }
       - name: services
         label: Service tags (Dine-in, Drive-thru…)
         type: object
@@ -87,13 +131,6 @@ content:
           - { name: text, label: Tag, type: string }
       - { name: googleRating, label: "Google rating (e.g. 4.6)", type: string }
       - { name: googleReviewCount, label: Number of Google reviews, type: string }
-      - { name: callbarText, label: Red call bar text (menu section), type: string }
-      - name: ticker
-        label: Scrolling banner messages
-        type: object
-        list: true
-        fields:
-          - { name: text, label: Message, type: string }
       - name: hours
         label: "Hours (24-hour clock: 11:00 = 11 AM, 21:00 = 9 PM)"
         type: object

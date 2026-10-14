@@ -1,20 +1,5 @@
 {
   "name": "Si Señor Mexican Grill",
-  "logoLine1": "Si Señor",
-  "logoLine2": "Mexican Grill",
-  "kicker": "¡Bienvenidos, amigos!",
-  "tagline": "Fresh salsa, homemade corn tortillas and sizzling fajitas on US-271 in Wister, Oklahoma.",
-  "highlights": [
-    {
-      "text": "Lunch special daily"
-    },
-    {
-      "text": "Dine-in"
-    },
-    {
-      "text": "Drive-thru"
-    }
-  ],
   "phone": "(918) 655-3131",
   "street": "501 US-271",
   "city": "Wister",
@@ -24,7 +9,6 @@
   "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=Si+Se%C3%B1or+Mexican+Grill,+501+US-271,+Wister,+OK+74966",
   "latitude": 34.9728471,
   "longitude": -94.7214731,
-  "nearby": "On US-271 in Wister, close to Lake Wister State Park and a short drive from Poteau. Dine in or grab it from the drive-thru.",
   "services": [
     {
       "text": "Dine-in"
@@ -38,27 +22,6 @@
   ],
   "googleRating": "4.6",
   "googleReviewCount": "584",
-  "callbarText": "Hungry? Call ahead or swing through the drive-thru.",
-  "ticker": [
-    {
-      "text": "LUNCH SPECIAL EVERY DAY"
-    },
-    {
-      "text": "TACO TUESDAY FROM 5 PM"
-    },
-    {
-      "text": "HOMEMADE CORN TORTILLAS"
-    },
-    {
-      "text": "FRESH SALSA"
-    },
-    {
-      "text": "DRIVE-THRU"
-    },
-    {
-      "text": "WISTER, OKLAHOMA"
-    }
-  ],
   "hours": [
     {
       "day": "Sunday",
